@@ -1,77 +1,93 @@
-.outermost{
-    background-color: black;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
-.outline {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-  }
-  
-  .rect {
-    stroke-dashoffset: 5;
-    stroke-dasharray: 0 0 10 40 10 40;
-    transition: 0.5s;
-    stroke: #fff;
-  }
-  
-  .nav {
+
+.outermost {
+    background: linear-gradient(135deg, #1c1c1c, #0d0d0d); /* Dark grey to black */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    margin-top: -47%;
     position: relative;
     width: 400px;
     height: 60px;
-  }
-  
-  .container:hover .outline .rect {
-    transition: 999999s;
-    /* Must specify these values here as something *different* just so that the transition works properly */
-    stroke-dashoffset: 1;
-    stroke-dasharray: 0;
-  }
-  
-  .container {
+}
+
+.container {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%); /* Darker purple to rich blue */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding: 0.5em;
-  }
-  
-  .btn {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.btn {
     padding: 0.5em 1.5em;
-    color: #5c3d2e;    
+    color: #ffffff;
     cursor: pointer;
-    transition: 0.1s;
-  }
-  
-  .btn:hover {
-    background: #fff3;
-  }
-  
-  .btn:nth-child(1):hover ~ svg .rect {
+    transition: 0.2s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.outline {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.rect {
+    stroke-dashoffset: 5;
+    stroke-dasharray: 0 0 10 40 10 40;
+    transition: 0.5s;
+    stroke: #ffffff;
+}
+
+.container:hover .outline .rect {
+    transition: 999999s;
+    stroke-dashoffset: 1;
+    stroke-dasharray: 0;
+}
+
+.btn:nth-child(1):hover ~ svg .rect {
     stroke-dashoffset: 0;
     stroke-dasharray: 0 2 8 73.3 8 10.7;
-  }
-  
-  .btn:nth-child(2):hover ~ svg .rect {
+}
+
+.btn:nth-child(2):hover ~ svg .rect {
     stroke-dashoffset: 0;
     stroke-dasharray: 0 12.6 9.5 49.3 9.5 31.6;
-  }
-  
-  .btn:nth-child(3):hover ~ svg .rect {
+}
+
+.btn:nth-child(3):hover ~ svg .rect {
     stroke-dashoffset: 0;
     stroke-dasharray: 0 24.5 8.5 27.5 8.5 55.5;
-  }
-  
-  .btn:nth-child(4):hover ~ svg .rect {
+}
+
+.btn:nth-child(4):hover ~ svg .rect {
     stroke-dashoffset: 0;
     stroke-dasharray: 0 34.7 6.9 10.2 6.9 76;
-  }
-  
-  .btn:hover ~ .outline .rect {
+}
+
+.btn:hover ~ .outline .rect {
     stroke-dashoffset: 0;
     stroke-dasharray: 0 0 10 40 10 40;
     transition: 0.5s !important;
-  }
-  
+}
